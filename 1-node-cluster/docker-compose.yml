@@ -1,0 +1,13 @@
+version: '3.1'
+
+services:
+
+  k8s-master:
+    build: .
+    image: ubuntu-host:latest
+    container_name: k8s-master
+    privileged: true
+    volumes:
+      - /sys/fs/cgroup:/sys/fs/cgroup:ro
+
+      
